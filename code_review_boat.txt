@@ -1,0 +1,21 @@
+Project Name :- BOAT
+
+
+Feature Name :- Virtual Lane Auction Integration
+
+	Code Review Date :- 18th and 20th Jan
+
+	Reviewer's Name :- Harshit Jain
+
+	Developer's Name :- Kiran
+
+	Comments/suggestions :-
+
+		1.) Improve the language of feature files
+			There is no 'then' statement(Verifications are done in When/and steps)
+			Break the steps which are having 'and' as conjuctive keyword
+
+		2.) Improve the code of step defs as well
+			Biggest blunder is using begin-rescue in the Verification statement. This will never fail your test even incase of application issue as well
+			The code between the steps should be minimal. Instead write methods in classes and just call them in steps
+			Classes(methods and page objects) are kept in the file which is present the step_definitions folder. Instead it should be kept in different folder(maybe named as page objects). Step_definition folder should only contain steps
